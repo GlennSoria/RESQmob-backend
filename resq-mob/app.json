@@ -12,6 +12,11 @@
       "supportsTablet": true
     },
     "android": {
+      "config": {
+        "googleMaps": {
+          "apiKey": "AIzaSyC2UEmT8yu-nEMcy0DWABscIfb0QzCC9tg"
+        }
+      },
       "package": "com.nol67.resqmob",
       "adaptiveIcon": {
         "backgroundColor": "#E6F4FE",
