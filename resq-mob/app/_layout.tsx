@@ -1,9 +1,9 @@
 // app/_layout.tsx
 import { NavigationContainer } from "@react-navigation/native";
 import { createNativeStackNavigator } from "@react-navigation/native-stack";
-import { Text, View } from "react-native";
 import { AuthProvider, useAuth } from "../hooks/useAuth";
 import ErrorBoundary from "../components/ErrorBoundary";
+import LoadingScreen from "../components/LoadingScreen";
 import Login from "./auth/login";
 import AdminOverview from "../screens/admin/Overview";
 import AdminCameraList from "../screens/admin/CameraList";
@@ -95,11 +95,7 @@ function RootNavigator() {
   const { isLoading, userRole } = useAuth();
 
   if (isLoading) {
-    return (
-      <View style={{ flex: 1, alignItems: "center", justifyContent: "center" }}>
-        <Text>Loading session...</Text>
-      </View>
-    );
+    return <LoadingScreen />;
   }
 
   return (
@@ -124,5 +120,5 @@ export default function RootLayout() {
         </NavigationContainer>
       </AuthProvider>
     </ErrorBoundary>
-  )
+  );
 }

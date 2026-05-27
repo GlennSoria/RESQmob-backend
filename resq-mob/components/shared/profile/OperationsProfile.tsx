@@ -254,8 +254,8 @@ export default function OperationsProfile({ profileData }: OperationsProfileProp
             <Switch
               value={notificationsEnabled}
               onValueChange={setNotificationsEnabled}
-              trackColor={{ false: "#ccc", true: "#81c784" }}
-              thumbColor={notificationsEnabled ? "#0066cc" : "#fff"}
+              trackColor={{ false: "#dce3e9", true: "#ffb3b4" }}
+              thumbColor={notificationsEnabled ? "#9d0028" : "#ffffff"}
             />
           </View>
           <View style={styles.divider} />
@@ -264,8 +264,8 @@ export default function OperationsProfile({ profileData }: OperationsProfileProp
             <Switch
               value={locationTrackingEnabled}
               onValueChange={setLocationTrackingEnabled}
-              trackColor={{ false: "#ccc", true: "#81c784" }}
-              thumbColor={locationTrackingEnabled ? "#0066cc" : "#fff"}
+              trackColor={{ false: "#dce3e9", true: "#ffb3b4" }}
+              thumbColor={locationTrackingEnabled ? "#9d0028" : "#ffffff"}
             />
           </View>
         </View>

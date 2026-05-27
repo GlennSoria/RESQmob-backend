@@ -47,7 +47,7 @@ export default function HamburgerSidebar({
   return (
     <View>
       <TouchableOpacity style={styles.iconButton} onPress={() => setOpen(true)}>
-        <Ionicons name="menu" size={20} color="#ffffff" />
+        <Ionicons name="menu" size={20} color="#9d0028" />
       </TouchableOpacity>
 
       <Modal transparent visible={open} animationType="fade" onRequestClose={() => setOpen(false)}>
@@ -102,10 +102,10 @@ const styles = StyleSheet.create({
     height: responsiveSize(36),
     borderRadius: responsiveSize(8),
     borderWidth: 1,
-    borderColor: "#374151",
+    borderColor: "#e3bebe",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "#111827",
+    backgroundColor: "#f4faff",
   },
   rootOverlay: {
     flex: 1,
@@ -117,14 +117,14 @@ const styles = StyleSheet.create({
   },
   panel: {
     width: responsiveSize(250),
-    backgroundColor: "#0b0d11",
+    backgroundColor: "#ffffff",
     paddingTop: responsiveSize(52),
     paddingHorizontal: responsiveSize(12),
     borderLeftWidth: 1,
-    borderLeftColor: "#1f2937",
+    borderLeftColor: "#e3bebe",
   },
   panelTitle: {
-    color: "#f8fafc",
+    color: "#161d21",
     fontSize: responsiveFontSize(18),
     fontWeight: "700",
     marginBottom: responsiveSize(12),
@@ -132,26 +132,26 @@ const styles = StyleSheet.create({
   navItem: {
     borderRadius: responsiveSize(8),
     borderWidth: 1,
-    borderColor: "#1f2937",
+    borderColor: "#e3bebe",
     marginBottom: responsiveSize(8),
     paddingVertical: responsiveSize(10),
     paddingHorizontal: responsiveSize(10),
   },
   navItemActive: {
-    borderColor: "#ef4444",
-    backgroundColor: "#181c24",
+    borderColor: "#9d0028",
+    backgroundColor: "#ffdada",
   },
   navItemText: {
-    color: "#d1d5db",
+    color: "#5b4040",
     fontSize: responsiveFontSize(14),
     fontWeight: "600",
   },
   navItemTextActive: {
-    color: "#ffffff",
+    color: "#9d0028",
   },
   divider: {
     height: 1,
-    backgroundColor: "#1f2937",
+    backgroundColor: "#e3bebe",
     marginVertical: responsiveSize(12),
   },
   logoutItem: {
@@ -160,14 +160,14 @@ const styles = StyleSheet.create({
     gap: responsiveSize(8),
     borderRadius: responsiveSize(8),
     borderWidth: 1,
-    borderColor: "#7f1d1d",
-    backgroundColor: "#3b1414",
+    borderColor: "#e3bebe",
+    backgroundColor: "#fff1f2",
     paddingVertical: responsiveSize(10),
     paddingHorizontal: responsiveSize(10),
     marginBottom: responsiveSize(8),
   },
   logoutText: {
-    color: "#fecaca",
+    color: "#9d0028",
     fontSize: responsiveFontSize(14),
     fontWeight: "600",
   },

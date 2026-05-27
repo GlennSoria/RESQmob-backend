@@ -4,10 +4,17 @@ import { DOMAIN_COLORS } from "../../../constants/designTokens";
 
 export const headerStyles = StyleSheet.create({
   container: {
-    backgroundColor: DOMAIN_COLORS.bfp.headerBackground,
+    backgroundColor: "#ffffff",
     paddingTop: responsiveSize(24),
     paddingHorizontal: responsiveSize(14),
     paddingBottom: responsiveSize(10),
+    borderBottomWidth: 1,
+    borderBottomColor: "#dce3e9",
+    shadowColor: "#000000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.06,
+    shadowRadius: 8,
+    elevation: 3,
   },
   navRow: {
     flexDirection: "row",

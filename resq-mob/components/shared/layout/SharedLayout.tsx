@@ -14,7 +14,7 @@ export default function SharedLayout({
   FooterComponent,
 }: SharedLayoutProps) {
   return (
-    <View style={{ flex: 1 }}>
+    <View style={{ flex: 1, backgroundColor: "#f4faff" }}>
       <HeaderComponent />
       <View style={{ flex: 1, padding: responsiveSize(16) }}>{children}</View>
       <FooterComponent />

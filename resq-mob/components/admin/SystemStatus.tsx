@@ -11,9 +11,10 @@ interface SystemStatusProps {
 }
 
 const statusColorMap: Record<ServiceHealthItem["status"], string> = {
-  Operational: "#15803d",
-  Degraded: "#d97706",
-  Offline: "#dc2626",
+  Operational: "#236580",
+  Degraded: "#c40a66",
+  Offline: "#9d0028",
+  "High Load": "#c41c3b",
 };
 
 export default function SystemStatus({

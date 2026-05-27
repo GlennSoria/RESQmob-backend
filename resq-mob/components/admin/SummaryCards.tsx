@@ -27,12 +27,12 @@ export default function SummaryCards({ overview, loadingOverview = false }: Summ
     datasets: [
       {
         data: temperatureSeries,
-        color: () => "#2d80c3",
+        color: () => "#c41c3b",
         strokeWidth: 2,
       },
       {
         data: smokeSeries,
-        color: () => "#e67e22",
+        color: () => "#236580",
         strokeWidth: 2,
       },
     ],
@@ -43,7 +43,7 @@ export default function SummaryCards({ overview, loadingOverview = false }: Summ
     name: item.label,
     population: item.value,
     color: item.color,
-    legendFontColor: "#334155",
+    legendFontColor: "#161d21",
     legendFontSize: 12,
   }));
 
@@ -54,28 +54,28 @@ export default function SummaryCards({ overview, loadingOverview = false }: Summ
         <Text style={styles.subtitle}>
           {loadingOverview ? "Refreshing from backend..." : "Counts synchronized from the backend API"}
         </Text>
-        <View style={{ flexDirection: "row", flexWrap: "wrap", gap: 10, marginTop: 10 }}>
-          <View style={{ minWidth: 120, backgroundColor: "#f8fafc", padding: 10, borderRadius: 8 }}>
-            <Text style={{ color: "#64748b", fontSize: 12 }}>Cameras</Text>
-            <Text style={{ color: "#0f172a", fontSize: 18, fontWeight: "700" }}>
+        <View style={styles.statTiles}>
+          <View style={styles.statTile}>
+            <Text style={styles.statTileLabel}>Cameras</Text>
+            <Text style={styles.statTileValue}>
               {overview?.camera_count ?? "-"}
             </Text>
           </View>
-          <View style={{ minWidth: 120, backgroundColor: "#f8fafc", padding: 10, borderRadius: 8 }}>
-            <Text style={{ color: "#64748b", fontSize: 12 }}>Incidents</Text>
-            <Text style={{ color: "#0f172a", fontSize: 18, fontWeight: "700" }}>
+          <View style={styles.statTile}>
+            <Text style={styles.statTileLabel}>Incidents</Text>
+            <Text style={styles.statTileValue}>
               {overview?.incident_count ?? "-"}
             </Text>
           </View>
-          <View style={{ minWidth: 120, backgroundColor: "#f8fafc", padding: 10, borderRadius: 8 }}>
-            <Text style={{ color: "#64748b", fontSize: 12 }}>Open / Investigating</Text>
-            <Text style={{ color: "#b91c1c", fontSize: 18, fontWeight: "700" }}>
+          <View style={styles.statTile}>
+            <Text style={styles.statTileLabel}>Open / Investigating</Text>
+            <Text style={[styles.statTileValue, styles.statTileValueAlert]}>
               {overview?.open_incidents ?? "-"}
             </Text>
           </View>
-          <View style={{ minWidth: 120, backgroundColor: "#f8fafc", padding: 10, borderRadius: 8 }}>
-            <Text style={{ color: "#64748b", fontSize: 12 }}>Resolved</Text>
-            <Text style={{ color: "#15803d", fontSize: 18, fontWeight: "700" }}>
+          <View style={styles.statTile}>
+            <Text style={styles.statTileLabel}>Resolved</Text>
+            <Text style={[styles.statTileValue, styles.statTileValueResolved]}>
               {overview?.resolved_incidents ?? "-"}
             </Text>
           </View>
@@ -95,16 +95,16 @@ export default function SummaryCards({ overview, loadingOverview = false }: Summ
           withOuterLines
           withShadow={false}
           chartConfig={{
-            backgroundColor: "#f5f6f7",
-            backgroundGradientFrom: "#f5f6f7",
-            backgroundGradientTo: "#f5f6f7",
+            backgroundColor: "#eef4fa",
+            backgroundGradientFrom: "#eef4fa",
+            backgroundGradientTo: "#eef4fa",
             decimalPlaces: 0,
-            color: () => "#334155",
-            labelColor: () => "#6b7280",
+            color: () => "#161d21",
+            labelColor: () => "#5b4040",
             propsForDots: {
               r: "4",
               strokeWidth: "1",
-              stroke: "#ffffff",
+                stroke: "#ffffff",
             },
           }}
           style={styles.chartKitContainer}
@@ -126,8 +126,8 @@ export default function SummaryCards({ overview, loadingOverview = false }: Summ
               paddingLeft="16"
               hasLegend={false}
               chartConfig={{
-                color: () => "#334155",
-                labelColor: () => "#6b7280",
+                color: () => "#161d21",
+                labelColor: () => "#5b4040",
               }}
               center={[10, 0]}
               absolute

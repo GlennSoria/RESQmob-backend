@@ -1,15 +1,19 @@
 import { StyleSheet } from "react-native";
 import { responsiveFontSize, responsiveSize } from "../../../utils/responsive";
-import { DOMAIN_COLORS } from "../../../constants/designTokens";
 
 export const headerStyles = StyleSheet.create({
   container: {
-    backgroundColor: DOMAIN_COLORS.admin.footerBackground,
+    backgroundColor: "#ffffff",
     paddingTop: responsiveSize(24),
     paddingHorizontal: responsiveSize(14),
     paddingBottom: responsiveSize(10),
-    borderBottomWidth: 2,
-    borderBottomColor: "#ef4444",
+    borderBottomWidth: 1,
+    borderBottomColor: "#dce3e9",
+    shadowColor: "#000000",
+    shadowOffset: { width: 0, height: 2 },
+    shadowOpacity: 0.06,
+    shadowRadius: 8,
+    elevation: 3,
   },
   navRow: {
     flexDirection: "row",
@@ -25,7 +29,7 @@ export const headerStyles = StyleSheet.create({
   title: {
     fontSize: responsiveFontSize(20),
     fontWeight: "700",
-    color: "white",
+    color: "#9d0028",
     flexShrink: 1,
   },
   rightControls: {
@@ -41,7 +45,8 @@ export const headerStyles = StyleSheet.create({
     height: responsiveSize(34),
     borderRadius: responsiveSize(18),
     borderWidth: 1,
-    borderColor: "#374151",
+    borderColor: "#e3bebe",
+    backgroundColor: "#f4faff",
     justifyContent: "center",
     alignItems: "center",
   },
@@ -52,7 +57,7 @@ export const headerStyles = StyleSheet.create({
     minWidth: responsiveSize(16),
     height: responsiveSize(16),
     borderRadius: responsiveSize(999),
-    backgroundColor: "#ef4444",
+    backgroundColor: "#9d0028",
     justifyContent: "center",
     alignItems: "center",
     paddingHorizontal: responsiveSize(3),
@@ -72,7 +77,7 @@ export const headerStyles = StyleSheet.create({
   notificationsModalPanel: {
     backgroundColor: "#ffffff",
     borderWidth: 1,
-    borderColor: "#d1d5db",
+    borderColor: "#e3bebe",
     borderRadius: responsiveSize(12),
     padding: responsiveSize(10),
   },
@@ -97,7 +102,7 @@ export const headerStyles = StyleSheet.create({
   notificationType: {
     fontSize: responsiveFontSize(11),
     fontWeight: "700",
-    color: "#dc2626",
+    color: "#9d0028",
   },
   notificationText: {
     fontSize: responsiveFontSize(13),
@@ -109,14 +114,14 @@ export const headerStyles = StyleSheet.create({
   },
   ackButton: {
     alignSelf: "flex-end",
-    backgroundColor: "#2563eb",
+    backgroundColor: "#236580",
     borderRadius: responsiveSize(6),
     paddingHorizontal: responsiveSize(10),
     paddingVertical: responsiveSize(6),
   },
   ackButtonDone: {
     alignSelf: "flex-end",
-    backgroundColor: "#16a34a",
+    backgroundColor: "#236580",
     borderRadius: responsiveSize(6),
     paddingHorizontal: responsiveSize(10),
     paddingVertical: responsiveSize(6),

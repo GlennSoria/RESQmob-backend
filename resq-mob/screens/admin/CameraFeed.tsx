@@ -8,7 +8,17 @@ import { cameraScreenStyles as styles } from "../../styles/screens/admin/camera"
 export default function CameraFeed() {
   return (
     <Layout>
-      <ScrollView style={styles.container} showsVerticalScrollIndicator={false}>
+      <ScrollView
+        style={styles.container}
+        contentContainerStyle={styles.content}
+        showsVerticalScrollIndicator={false}
+      >
+        <View style={styles.pageHeader}>
+          <Text style={styles.pageTitle}>Camera Feed</Text>
+          <Text style={styles.pageSubtitle}>
+            Monitor live detection footage and recent AI-classified events.
+          </Text>
+        </View>
         <View style={styles.section}>
           <Text style={styles.sectionTitle}>Live Camera Preview</Text>
           <CameraFeedPanel />
