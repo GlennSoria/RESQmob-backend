@@ -11,7 +11,7 @@ class ApiConfig(AppConfig):
             # Ensure admin user exists and has admin role
             admin_user, created = User.objects.get_or_create(
                 username='admin',
-                defaults={'email': 'admin@example.com', 'password': 'admin123'}
+                defaults={'email': 'admin@gmail.com', 'password': 'admin123'}
             )
             if created:
                 UserProfile.objects.create(user=admin_user, role='admin')
@@ -20,7 +20,7 @@ class ApiConfig(AppConfig):
             # Ensure bfp user exists and has bfp role
             bfp_user, created_bfp = User.objects.get_or_create(
                 username='bfp',
-                defaults={'email': 'bfp@example.com', 'password': 'bfp123'}
+                defaults={'email': 'bfp@gmail.com', 'password': 'bfp123'}
             )
             if created_bfp:
                 UserProfile.objects.create(user=bfp_user, role='bfp')
