@@ -40,7 +40,7 @@ class LoginView(APIView):
 	permission_classes = [permissions.AllowAny]
 
 	def post(self, request):
-		email = str(request.data.get("email", "")).strip().lower()
+		email = str(request.data.get("email") or request.data.get("username", "")).strip().lower()
 		password = str(request.data.get("password", ""))
 
 		if not email or not password:
