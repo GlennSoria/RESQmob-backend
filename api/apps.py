@@ -7,10 +7,24 @@ class ApiConfig(AppConfig):
         from django.db.utils import OperationalError
         User = get_user_model()
         try:
+            # Create admin user
             if not User.objects.filter(username='admin').exists():
-                User.objects.create_user(username='admin', password='admin123')
+                admin_user = User.objects.create_user(
+                    username='admin',
+                    email='admin@example.com',
+                    password='admin123'
+                )
+                from .models import UserProfile
+                UserProfile.objects.create(user=admin_user, role='admin')
+            # Create bfp user
             if not User.objects.filter(username='bfp').exists():
-                User.objects.create_user(username='bfp', password='bfp123')
+                bfp_user = User.objects.create_user(
+                    username='bfp',
+                    email='bfp@example.com',
+                    password='bfp123'
+                )
+                from .models import UserProfile
+                UserProfile.objects.create(user=bfp_user, role='bfp')
         except OperationalError:
             # Database might not be ready yet (e.g., during migrations)
             pass
